@@ -1,0 +1,463 @@
+.header_bar_long {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to bottom, #ebeae6, #f3f2f0, #ffffff);
+    padding: 0 30px;
+    margin: 0;
+}
+
+.header_bar_long div {
+    margin-right: 100px;
+}
+
+.menu_long {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
+.menu_long a {
+    text-decoration: none;
+    color: #2f2e2e; 
+    font-family: "DM Serif Display", serif;
+    font-size: 16px;
+    margin: 0 10px;
+    white-space: nowrap;
+    text-align: left;
+}
+
+.community_body {
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+}
+
+.board_container{
+    display: grid;
+    grid-template-columns: 20% 70%;
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+}
+
+.board_nav_box {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* 행 간격 조정 */
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+.dropdown_search  {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center ;
+    padding: 0 30px 0;
+    min-width: 200px;
+    height: 50px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.dropdown_search select, .search_box {
+    font-family: "Noto Sans KR", serif;
+    font-size: 14px;
+    margin: 0 10px;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #d3d2cf;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #ffffff;
+}
+
+.search_box {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    /*width: 100%;*/
+    height: 50px;
+    margin: 0 10px 0;
+    box-sizing: border-box;
+}
+
+.search_box input{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color:transparent;
+    font-family: "Noto Sans KR", serif;
+    font-size: 16px
+    padding: 5px;
+}
+
+.search_box i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px auto;
+    margin: 0;
+    box-sizing: border-box;
+    color: #d3d3d3;
+}
+
+.dropdown_search .date_box {
+    width: 100%;
+}
+
+.date_box {
+    display: flex;
+    flex-direction: row ;
+    box-sizing: border-box;
+    font-family: "Noto Sans KR", serif;
+    font-size: 14px;
+    margin: 0 10px;
+    white-space: nowrap;
+    width: 100%;
+    text-align: left;
+    border: 1px solid #d3d2cf;
+    border-radius: 5px;
+    padding: 6.5px;
+    background-color: #ffffff;
+}
+
+.date_box input {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color:transparent;
+    font-family: "Noto Sans KR", serif;
+    font-size: 16px
+    padding: 5px;
+}
+
+.sidebar{
+    grid-column: 1 / 2;
+    width: 80%;
+    height: 100vh;
+    padding: 0px;
+    margin: 0;
+    border-box: border-box;
+    border-right: 1px solid #d3d2cf;
+}
+
+
+.sidebar ul, .sidebar li {
+    margin: 30px 10px;
+    list-style: none;
+    padding: 0;
+    font-family: "noto Sans KR", serif;
+    font-size: 16px;
+}
+
+.sidebar li {
+    margin: 10px 30px;
+    border-box :border-box;
+    text-align: left; 
+
+}
+
+.board{
+    grid-column: 2 / 3;
+    width: 100%;
+    height: 100vh;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.posts ul, li {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    font-family: "noto Sans KR", serif;
+    font-size: 16px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.table_container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    heigh :fit-content;
+    min-height: 500px;
+    max-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.board_table {
+    width: 100%;
+    height: fit-content;
+    max-height: 800px;
+    border-collapse: collapse;
+    table-layout: fixed; 
+    word-wrap: break-word; 
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ebeae6;
+    padding: 8px;
+    text-align: left;
+    overflow: hidden; /* 넘치는 내용을 숨김 */
+    text-overflow: ellipsis; /* 넘치는 내용을 ...으로 표시 */
+    white-space: nowrap; /* 공백을 줄 바꿈하지 않음 */
+}
+
+th{
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+    font-family: "Noto Sans KR", serif;
+    font-size: 14px;
+}
+
+.pagination {
+    display: flex; 
+    justify-content: center;
+    margin-top: 20px
+    gap: 5px;
+    flex-wrap: nowrap;
+}
+
+.pagination a {
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-decoration: none;
+    color: #2f2e2e;
+    width: 30px; 
+    height: 30px; 
+    border: 1px solid #ddd;
+    border-radius: 50%; 
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f3f2f0;
+    color: #ffffff;
+}
+
+.pagination a.active {
+    background-color: #2f2e2e;
+    color: white;
+    border: 1px solid #f3f2f0;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 10px;
+}
+
+.write_button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap : 20px;
+}
+
+#write {
+    background-color: #2f2e2e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-family: "Noto Sans KR", serif;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#write a {
+    color: white;
+    text-decoration: none;
+    font-family: "Noto Sans KR", serif;
+    font-size: 15px;
+}
+
+#write:hover {
+    background-color: #5e5d5c;
+}
+
+.sort_box {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    min-width: 200px;
+    margin: 0 0 10px;
+    border-box: border-box;
+}
+
+.sort_box select {
+    font-family: "Noto Sans KR", serif;
+    font-size: 14px;
+    margin: 0;
+    white-space: nowrap;
+    width: 90px;
+    text-align: center;
+    border: 1px solid #d3d2cf;
+    border-radius: 5px;
+    background-color: #ffffff;
+}
+
+/* 게시글 열람 페이지 */
+.board {
+    padding: 20px;
+}
+.board_about {
+    display: grid;
+    grid-template-columns: 0.3fr 3fr; /* 두 개의 컬럼: 하나는 레이블, 다른 하나는 값 */
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font: 16px "Noto Sans KR", serif;
+    border : 1px solid #d3d2cf;
+}
+.board_about h1 {
+    text-align: center;
+    grid-column: span 2; /* 제목은 두 컬럼에 걸쳐 표시 */
+    margin: 0 0 10px 0;
+    font: 20px "Noto Sans KR", serif;
+    font-weight: bold;
+}
+.board_about p {
+    margin: 0 0 10px 0;
+}
+.board_content {
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    border : 1px solid #d3d2cf;
+    font: 16px "Noto Sans KR", serif;
+    min-height : 500px;
+    text-align: center;
+}
+
+.post_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    gap: 10px;
+}
+
+.post_button button {
+    padding: 10px 20px;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #2f2e2e;
+    color: white;
+    cursor: pointer;
+    width: 100px;
+    text-align: center;
+    font-family: "Noto Sans KR", serif;
+    font-size: 14px;
+}
+
+.post_button button:hover {
+    background-color: #5e5d5c;
+}
+
+.post_button button a {
+    color: white;
+    text-decoration: none;
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+    line-height: 20px;
+}
+
+.post_button button a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.post_content {
+    text-align: left;
+    width: 90%;
+    min-height: 500px;
+    max-height: fit-content;
+    font-size: 16px;
+    font : 16px "Noto Sans KR", serif;
+    white-space: pre-wrap;
+    overflow: auto;
+    border: none;
+    background-color: white;
+}
+
+.board_content textarea {
+    width: 90%;
+    overflow-y: auto; 
+    padding: 10px;
+    border-radius: 5px;
+    resize: none;
+}
+
+.board_about h1 > input{
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background-color:transparent;
+    font-family: "Noto Sans KR", serif;
+    font-size: 18px;
+    font-weight: bold;
+    resize: none;
+    text-align: center;
+    padding: 0;
+}
+
+.board_about p {
+    font: 16px "Noto Sans KR", serif;
+}
+
+.board_about p > input{
+    width: 95%;
+    height: 100%;
+    border: 1px solid #d3d2cf;
+    border-radius: 5px;
+    background-color:transparent;
+    font-family: "Noto Sans KR", serif;
+    font-size: 16px;
+    resize: none;
+    text-align: left;
+    padding: 0;
+}
+
+.db_info{
+    width: 95%;
+    height: 75%;
+    border: 1px solid #d3d2cf;
+    border-radius: 5px;
+    background-color:transparent;
+    font-family: "Noto Sans KR", serif;
+    font-size: 16px;
+    resize: none;
+    text-align: left;
+    padding: 0;
+}

@@ -1,0 +1,95 @@
+.header_bar {
+    display: flex;
+    justify-content: space-between; /* 공간을 균등하게 분배 */
+    align-items: center; /* 수직 가운데 정렬 */
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    margin: 0;
+    position: relative; /* 자식 요소의 절대 위치를 위해 추가 */
+}
+
+#menu-toggle {
+    cursor: pointer;
+    z-index: 1; /* 로고 아래로 내려가지 않도록 z-index 설정 */
+}
+
+#menu, .sub-menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    top: 80%; /* 부모 요소의 아래에 위치 */
+    left: 0;
+    background: #f3f2f0; /* 메뉴 배경색 */
+    width: 200px; /* 부모 요소의 너비를 가득 채움 */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 그림자 추가 */
+}
+
+#menu li {
+    padding: 10px 20px;
+}
+
+#menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+
+.logo {
+    position: absolute; /* 부모 요소 내에서 절대 위치 */
+    left: 50%; /* 왼쪽에서 50% */
+    transform: translateX(-50%); /* 가운데 정렬 */
+}
+
+.header_bar > ul {
+    position: static; /* 부모 요소의 위치를 벗어나지 않도록 고정 */
+}
+
+.tb-menu-toggle {
+    border: 0;
+    position: relative;
+    background: transparent;
+    cursor: pointer;
+  }
+  
+.tb-menu-toggle i {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 20%;
+    -webkit-transition:all .2s;
+        -moz-transition:all .2s;
+        -o-transition:all .2s;
+            transition:all .2s;
+}
+
+.tb-menu-toggle i:nth-child(2) {
+    top: 40%;
+}
+.tb-menu-toggle i:nth-child(3) {
+    top: 80%;
+}
+
+/* Style the active toggle here */
+.tb-menu-toggle.tb-active-toggle i {  }
+
+/*Animation of the toggle*/
+.tb-menu-toggle.tb-animate-toggle i:first-child,
+.tb-menu-toggle.tb-animate-toggle i:nth-child(2){ 
+    top: 40%;
+    -webkit-transform:rotate(45deg);
+        -moz-transform:rotate(45deg);
+        -ms-transform:rotate(45deg);
+        -o-transform:rotate(45deg);
+            transform:rotate(45deg);
+    } 
+.tb-menu-toggle.tb-animate-toggle i:nth-child(3){ 
+    top: 40%;
+    -webkit-transform:rotate(-45deg);
+        -moz-transform:rotate(-45deg);
+        -ms-transform:rotate(-45deg);
+        -o-transform:rotate(-45deg);
+            transform:rotate(-45deg);
+}
