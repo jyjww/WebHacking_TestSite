@@ -118,6 +118,13 @@
     width: 100%;
 }
 
+.search_button {
+    border: 1px transparent;
+    background-color: white;
+    padding: 10px;
+    font-size : 14px;
+}
+
 .date_box {
     display: flex;
     flex-direction: row ;
@@ -279,7 +286,7 @@ th{
     gap : 20px;
 }
 
-#write {
+#write_button1 {
     background-color: #2f2e2e;
     color: white;
     border: none;
@@ -291,14 +298,7 @@ th{
     transition: background-color 0.3s ease;
 }
 
-#write a {
-    color: white;
-    text-decoration: none;
-    font-family: "Noto Sans KR", serif;
-    font-size: 15px;
-}
-
-#write:hover {
+#write_button1:hover {
     background-color: #5e5d5c;
 }
 

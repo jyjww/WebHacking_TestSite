@@ -6,9 +6,7 @@
         <?php include 'page_general/header.php'; ?>
         <div class="mainpage_box">
             <h1 id="welcome_text">Welcome to yyz_code</h1>
-            <p id="welcome_text2">
-                <?php include 'php_function/session.php'; ?>
-            </p>
+            <p id="welcome_text2"><?php include 'php_function/session.php'; ?></p>
         </div>
         <div class="mainpage_button">
             <p id="login_text">이미 회원입니다</p>

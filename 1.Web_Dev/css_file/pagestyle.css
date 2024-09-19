@@ -170,9 +170,9 @@ button:hover {
     text-align: left;
 }
 
-.mypage_input label, .mypage_info label {
+.mypage_input label, .mypage_info label, input::placeholder {
     font-family: "Jeju Myeongjo", serif;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .mypage_input2 {

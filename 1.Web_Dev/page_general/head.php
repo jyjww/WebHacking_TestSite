@@ -4,5 +4,4 @@
     <link rel="stylesheet" href="css_file/mainstyle.css">
     <link rel="stylesheet" href="css_file/pagestyle.css">
     <link rel="stylesheet" href="css_file/header.css">
-    <script defer src="javascript_file/maskpass.js"></script>
 </head>

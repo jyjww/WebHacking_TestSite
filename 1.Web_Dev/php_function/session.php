@@ -1,14 +1,13 @@
 <?php
-
-require_once('dbconnect.php');
+require_once 'dbconnect.php';
 
 if(session_status()==PHP_SESSION_NONE){
     session_start();
-}
+};
 
 if (isset($_SESSION['username'])) {
     $session_id = session_id();
-    //echo "$session_id<br>";
+    
     $sql = "SELECT username FROM login WHERE session_id = '$session_id'";
     $result = mysqli_query($db_connect, $sql);
 
@@ -18,7 +17,7 @@ if (isset($_SESSION['username'])) {
     } else {
         echo "안녕하세요. yyz_code입니다.";
     }
-} else {
-    echo "안녕하세요. yyz_code입니다.";
-}
+} else{
+    echo"안녕하세요. yyz_code입니다.";
+};
 ?>

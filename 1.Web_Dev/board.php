@@ -1,20 +1,10 @@
-
-<?php include 'php_function/board/viewpost.php'; ?>
 <!DOCTYPE html>
 <html>
     <?php include 'page_general/board_head.php'; ?>
     <body class="community_body">
         <?php include 'page_general/board_header.php'; ?>
         <main class="board_container">
-            <div class="sidebar">
-                <ul>
-                    <li><a href="board.php">전체게시판</a></li>
-                    <li><a href="board.php?board=board">공지사항</a></li>
-                    <li><a href="board.php?board=sayhi">가입인사</a></li>
-                    <li><a href="board.php?board=community">자유수다글</a></li>
-                    <li><a href="board.php?board=pet">반려동물자랑</a></li>
-                </ul>
-            </div>
+            <?php include 'page_general/board_sidebar.php'; ?>
             <div class="board">
                 <div class="board_nav_box">
                     <div class="dropdown_search">
@@ -78,12 +68,13 @@
                     </table>
                 </form>
                 <div class="write_button">
-                    <button id ="write" type="submit"><a href="post.php">글쓰기</a></button>
+                    <a href='writenew.php' id ="write_button1">글쓰기</a>
                 </div>
                 <div class="pagination" id="pagination"></div>
             </div>
         </main>
         <script src="javascript_file/search.js"></script>
         <script src="javascript_file/pagination.js"></script>
+        <script src="javascript_file/checklogin.js"></script>
     </body>
 </html>
