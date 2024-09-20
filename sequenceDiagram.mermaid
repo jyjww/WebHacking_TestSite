@@ -1,0 +1,60 @@
+sequenceDiagram
+    actor User
+    participant Login
+    participant Register
+    participant userAuth
+    participant Mypage
+    participant Board
+    participant Post
+    participant UpdatePost
+    participant WriteNew
+    participant AuthBoard
+    participant Database
+		
+    User->>Login: 아이디와 비밀번호 입력
+    Login->>userAuth: 회원정보 검증 (logincheck.php)
+    alt Authentication successful
+        Login-->>User: Redirect to MyPage
+        User->>Mypage: Access MyPage
+    else
+        Login-->>User: Invalid credentials
+    end
+    participant Database
+
+    User->>Login: 아이디와 비밀번호 입력
+    Login->>userAuth: 회원정보 검증 (logincheck.php)
+    userAuth->>Login: 인증 결과 전송
+
+    User->>Board: Community 접속
+    Board->>Database: posts 테이블 열람
+    Database-->>Board: posts 테이블 정보 전달 (load_post.php)
+    
+    User->>Board: 게시글 검색
+    Board->>Database: SQL Query Search, OrderBy
+    Database-->>Board: Qwuery 결과값 반환
+    Board->>Post: 게시글 열람
+    alt User authenticated
+        Note right of User : 로그인 필요
+        
+        rect rgb(209,246,244)
+	        alt User UpdatePost
+	        Post-->>UpdatePost: 게시글 수정 요청 (submit)
+	        UpdatePost-->>AuthBoard: User 권한 확인(viewpost.php)
+	        AuthBoard-->>Database: User 세션 정보와 수정하려는 게시글의 username 매칭
+	        Database-->>UpdatePost: 수정 내용 저장 후 출력
+	        else Authentication failed
+	        AuthBoard-->>Board: 수정 거부. Board로 리다이렉트
+	        end 
+	      end
+        
+        rect rgb(234,219,246)
+	        alt User write New post
+	        Board-->>WriteNew: 새로운 게시글 작성
+	        WrieNew-->>AuthBoard: 로그인 여부 검증
+	        else Authentication failed
+	        AuthBoard-->>Board: 수정 거부. Board로 리다이렉트
+	        end
+	      end     
+    else Authentication failed
+    AuthBoard->Board: 게시글 수정, 작성 거부
+		end
